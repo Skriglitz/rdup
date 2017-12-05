@@ -1,0 +1,19 @@
+{
+  "name": "rdup",
+  "version": "1.0.0",
+  "description": "Rapid Deployment Update Package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Skriglitz/rdup.git"
+  },
+  "author": "Skriglitz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Skriglitz/rdup/issues"
+  },
+  "homepage": "https://github.com/Skriglitz/rdup"
+}

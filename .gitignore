@@ -57,3 +57,8 @@ typings/
 # dotenv environment variables file
 .env
 
+# Visual Studio Code
+.vscode
+
+# Keeping repo clean
+package-lock.json
