@@ -1,4 +1,4 @@
-# RDUP (Rapid Deployment Update Package)
+# RDUP (Rapid Deployment Update Packager)
 
 [![Dependencies Status](https://david-dm.org/Skriglitz/rdup/status.png)](https://david-dm.org/Skriglitz/rdup)
 [![GitHub issues](https://img.shields.io/github/issues/Skriglitz/rdup.svg)](https://github.com/Skriglitz/rdup/issues)
