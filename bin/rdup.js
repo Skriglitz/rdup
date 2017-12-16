@@ -10,13 +10,13 @@ program.command('pack <dir> <output>')
     .alias('p')
     .description('create rdup archive')
     .option('--ordering <file path>', 'path to a text file for ordering contents')
-    .option('--unpack <expression>', 'do not pack files matching glob <expression>')
-    .option('--unpack-dir <expression>', 'do not pack dirs matching glob <expression> or starting with literal <expression>')
+    .option('--exclude <expression>', 'exclude files matching glob <expression>')
+    .option('--exclude-dir <expression>', 'exclude dirs matching glob <expression> or starting with literal <expression>')
     .option('--exclude-hidden', 'exclude hidden files')
     .action(function (dir, output, options) {
         options = {
-            unpack: options.unpack,
-            unpackDir: options.unpackDir,
+            exclude: options.exclude,
+            excludeDir: options.excludeDir,
             ordering: options.ordering,
             dot: !options.excludeHidden
         };
