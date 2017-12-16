@@ -55,6 +55,13 @@ program.command('extract <archive> <dest>')
         rdup.extractAll(archive, dest);
     });
 
+program.command('check <archive>')
+    .alias('c')
+    .description('check archive for corrupt files')
+    .action(function (archive) {
+        rdup.validatePackage(archive);
+    });
+
 program.command('*')
     .action(function (cmd) {
         console.log('rdup: \'%s\' is not an rdup command. See \'rdup --help\'.', cmd);

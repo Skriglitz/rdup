@@ -62,3 +62,8 @@ typings/
 
 # Keeping repo clean
 package-lock.json
+
+# Ignore testing files
+build/
+out/
+test.rup
