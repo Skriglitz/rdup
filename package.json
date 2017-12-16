@@ -17,14 +17,8 @@
     "chromium-pickle-js": "^0.2.0",
     "commander": "^2.12.2",
     "cuint": "^0.2.2",
-    "eslint": "^4.12.1",
     "glob": "^7.1.2",
     "mkdirp": "^0.5.1",
-    "sumchecker": "^2.0.2",
-    "throttle": "^1.0.3",
     "tmp": "0.0.33"
-  },
-  "devDependencies": {
-    "electron": "^1.7.9"
   }
 }
