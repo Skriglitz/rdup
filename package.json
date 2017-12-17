@@ -1,8 +1,11 @@
 {
   "name": "rdup",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Rapid Deployment Update Package",
   "main": "index.js",
+  "bin": {
+    "rdup": "./bin/rdup.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Skriglitz/rdup.git"
