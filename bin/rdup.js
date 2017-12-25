@@ -13,12 +13,14 @@ program.command('pack <dir> <output>')
     .option('--exclude <expression>', 'exclude files matching glob <expression>')
     .option('--exclude-dir <expression>', 'exclude dirs matching glob <expression> or starting with literal <expression>')
     .option('--exclude-hidden', 'exclude hidden files')
+    .option('--no-compress', 'do not enable compression')
     .action(function (dir, output, options) {
         options = {
             exclude: options.exclude,
             excludeDir: options.excludeDir,
             ordering: options.ordering,
-            dot: !options.excludeHidden
+            dot: !options.excludeHidden,
+            compress: options.compress
         };
         rdup.createPackageWithOptions(dir, output, options, function (error) {
             if (error) {

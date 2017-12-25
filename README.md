@@ -106,26 +106,6 @@ rdup.createPackage(src, dest, function() {
 
 Please note that there is currently **no** error handling provided!
 
-### Transform
-You can pass in a `transform` option, that is a function, which either returns
-nothing, or a `stream.Transform`. The latter will be used on files that will be
-in the `.rup` file to transform them (e.g. compress).
-
-```js
-var rdup = require('rdup');
-
-var src = 'some/path/';
-var dest = 'name.rup';
-
-function transform(filename) {
-  return new CustomTransformStream()
-}
-
-rdup.createPackageWithOptions(src, dest, { transform: transform }, function() {
-  console.log('done.');
-})
-```
-
 ## Format
 
 RDUP uses [Pickle][pickle] to safely serialize binary value to file, there is
