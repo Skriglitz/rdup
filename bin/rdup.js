@@ -13,7 +13,7 @@ program.command('pack <dir> <output>')
     .option('--exclude <expression>', 'exclude files matching glob <expression>')
     .option('--exclude-dir <expression>', 'exclude dirs matching glob <expression> or starting with literal <expression>')
     .option('--exclude-hidden', 'exclude hidden files')
-    .option('--no-compress', 'do not enable compression')
+    .option('--no-compress', 'do not enable bzip2 compression')
     .action(function (dir, output, options) {
         options = {
             exclude: options.exclude,
