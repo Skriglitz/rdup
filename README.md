@@ -39,6 +39,7 @@ $ rdup --help
           --exclude <expression>        exclude files matching glob <expression>
           --exclude-dir <expression>    exclude dirs matching glob <expression> or starting with literal <expression>
           --exclude-hidden              exclude hidden files
+          --no-compress                 do not use compression
 
     list|l <archive>
        list files of rdup archive

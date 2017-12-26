@@ -22,10 +22,17 @@ program.command('pack <dir> <output>')
             dot: !options.excludeHidden,
             compress: options.compress
         };
+        
+        let start = process.hrtime();
         rdup.createPackageWithOptions(dir, output, options, function (error) {
             if (error) {
                 console.error(error.stack);
                 process.exit(1);
+            } else {
+                let end = process.hrtime(start);
+                let duration = ((end[0] * 1) + (end[1] / 1e9));
+                let files = rdup.listPackage(output);
+                console.log(`Successfully created package ${output}. Wrote ${files.length} files in ${duration.toFixed(3)}s`);
             }
         });
     });
