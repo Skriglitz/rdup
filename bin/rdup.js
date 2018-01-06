@@ -13,14 +13,20 @@ program.command('pack <dir> <output>')
     .option('--exclude <expression>', 'exclude files matching glob <expression>')
     .option('--exclude-dir <expression>', 'exclude dirs matching glob <expression> or starting with literal <expression>')
     .option('--exclude-hidden', 'exclude hidden files')
-    .option('--no-compress', 'do not enable bzip2 compression')
+    .option('--no-compress <expression>', 'do not compress files matching <expression>')
+    .option('--hash <type>', 'use hashing algorithm <type> for checksums')
+    .option('--algo <type>', 'compress files using <type> algorithm')
+    .option('--level <level>', 'compression level, Valid options: 1-9')
     .action(function (dir, output, options) {
         options = {
             exclude: options.exclude,
             excludeDir: options.excludeDir,
             ordering: options.ordering,
             dot: !options.excludeHidden,
-            compress: options.compress
+            compress: options.compress,
+            hash: options.hash,
+            algo: options.algo,
+            level: options.level
         };
         
         let start = process.hrtime();
