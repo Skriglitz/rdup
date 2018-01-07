@@ -23,7 +23,7 @@ program.command('pack <dir> <output>')
             excludeDir: options.excludeDir,
             ordering: options.ordering,
             dot: !options.excludeHidden,
-            compress: options.compress,
+            compressExclude: options.compress,
             hash: options.hash,
             algo: options.algo,
             level: options.level
@@ -75,6 +75,17 @@ program.command('check <archive>')
     .description('check archive for corrupt files')
     .action(function (archive) {
         rdup.validatePackage(archive);
+    });
+
+program.command('algorithms')
+    .description('Show supported hash and compression algorithms')
+    .action(function () {
+        console.log('Compression Algorithms:');
+        console.log('bwtc*, bzip2*, dmc, lzjb*, lzjbr*, lzp3, ppm');
+        console.log('* denotes algorithm supports compression levels 1 - 9\n');
+        
+        console.log('Hash Algorithms:');
+        console.log('md5, sha, sha224, sha256, sha384, sha512, whirlpool\n');
     });
 
 program.command('*')

@@ -13,8 +13,28 @@ RDUP is package management system designed to enable developers to rapidly deplo
 * Support random access
 * Use JSON to store files' information
 * Very easy to write a parser
-* Supports SHA-256 Checksums for file verification
-* Uses Bzip2 to compress data to shrink package contents
+* Supports Checksums for file verification 
+* Supports compression to shrink package contents
+
+## Supported Algorithms
+
+### Compression Algorithms
+* BWTC [Supports Level 1-9]
+* Bzip2 [Supports Level 1-9]
+* Dmc
+* Lzjb [Supports Level 1-9]
+* LzjbR [Supports Level 1-9]
+* Lzp3
+* PPM
+
+### Hash Algorithms
+* MD5
+* SHA
+* SHA224
+* SHA256
+* SHA384
+* SHA512
+* Whirlpool
 
 ## Command line utility
 
@@ -40,7 +60,10 @@ $ rdup --help
           --exclude <expression>        exclude files matching glob <expression>
           --exclude-dir <expression>    exclude dirs matching glob <expression> or starting with literal <expression>
           --exclude-hidden              exclude hidden files
-          --no-compress                 do not use bzip2 compression
+          --no-compress <expression>    do not compress files matching <expression>
+          --hash <type>                 use hashing algorithm <type> for checksums
+          --algo <type>                 compress files using <type> algorithm
+          --level <level>               compression level, Valid options: 1-9
 
     list|l <archive>
        list files of rdup archive
@@ -53,6 +76,9 @@ $ rdup --help
 
     check|c <archive>
        check archive for corrupt files
+
+    algorithms
+        Show supported hash and compression algorithms
 
   Options:
 
