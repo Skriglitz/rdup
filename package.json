@@ -19,9 +19,9 @@
   "dependencies": {
     "chromium-pickle-js": "^0.2.0",
     "commander": "^2.12.2",
+    "compressjs": "github:Skriglitz/compressjs",
     "cuint": "^0.2.2",
     "glob": "^7.1.2",
-    "keybase-compressjs": "^1.0.1-c",
     "mkdirp": "^0.5.1",
     "tmp": "0.0.33"
   }
